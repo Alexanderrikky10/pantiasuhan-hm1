@@ -66,12 +66,12 @@
           <div class="contact-right">
   
            
-                <div class="alert alert-dismissible fade show" role="alert" style="background-color:var(--font-color);">
+                {{-- <div class="alert alert-dismissible fade show" role="alert" style="background-color:var(--font-color);">
                     <p style="color:var(--bg-color);"></p>
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
-                </div>
+                </div> --}}
            
   
             <form action="" method="post" class="signin-form">

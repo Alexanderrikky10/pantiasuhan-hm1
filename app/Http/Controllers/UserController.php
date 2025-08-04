@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Galery;
 use Carbon\Carbon;
 use App\Models\About;
 use App\Models\Media;
@@ -148,6 +149,7 @@ class UserController extends Controller
 
     public function berita()
     {
+
         return view('pages.berita', [
             'berita' => Berita::all(),
         ]);
@@ -155,6 +157,15 @@ class UserController extends Controller
 
     public function galery()
     {
-        return view('pages.galery');
+        return view('pages.galery', [
+            'galery' => Galery::where('status', true)
+                // ->orderBy('created_at', 'desc')
+                ->get(),
+        ]);
+    }
+
+    public function contact()
+    {
+        return view('pages.contact');
     }
 }

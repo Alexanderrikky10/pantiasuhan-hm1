@@ -17,7 +17,9 @@ class PesanResource extends Resource
 {
     protected static ?string $model = Pesan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationGroup = 'Manajemen Konten';
+    protected static ?string $navigationLabel = 'Pesan';
+    protected static ?string $navigationIcon = 'heroicon-o-inbox-arrow-down';
 
     public static function form(Form $form): Form
     {
@@ -44,6 +46,9 @@ class PesanResource extends Resource
                 Tables\Columns\TextColumn::make('email')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('subjek')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('pesan')
+                    ->limit(50)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

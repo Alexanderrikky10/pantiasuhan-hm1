@@ -83,7 +83,6 @@ class DonasiResource extends Resource
                         'settlement' => 'success',
                         'cancel' => 'danger',
                         'expire' => 'danger',
-                        'deny' => 'danger',
                         default => 'secondary',
                     }),
 

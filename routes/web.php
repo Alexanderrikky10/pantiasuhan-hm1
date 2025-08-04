@@ -28,6 +28,5 @@ Route::get('/galery', [UserController::class, 'galery'])->name('galery');
 
 Route::post('/updatestatus/{id}', [UserController::class, 'updateStatus'])->name('update-status');
 
-Route::get('/kontak', function () {
-    return view('pages.contact');
-});
+
+Route::get('/kontak', [UserController::class, 'contact'])->name('user.contact');
